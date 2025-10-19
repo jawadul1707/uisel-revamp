@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Programs | UISEL - Universal Institute of Skills & Entrepreneurship Ltd.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#18196b',
+                        'purple-600': '#18196b',
+                        'purple-700': '#14155a',
+                        'purple-800': '#101146',
+                        'purple-100': '#e3e4f7',
+                        'purple-200': '#c7c9ee',
+                        'purple-300': '#abadd6',
+                        'purple-50': '#f5f6fa',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .training-card {
+            transition: all 0.3s ease;
+        }
+        .training-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .country-filter-btn.active {
+            background-color: #18196b;
+            color: white;
+        }
+        .program-detail-section {
+            scroll-margin-top: 100px;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-xl">UI</span>
+                </div>
+                <span class="text-xl font-bold text-primary">UISEL</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-gray-700 hover:text-primary">Home</a>
+                <a href="index.html#about" class="text-gray-700 hover:text-primary">About Us</a>
+                <a href="index.html#services" class="text-gray-700 hover:text-primary">Services</a>
+                <a href="training.html" class="text-primary font-semibold">Training Programs</a>
+                <a href="index.html#global" class="text-gray-700 hover:text-primary">Global Reach</a>
+                <a href="index.html#contact" class="text-gray-700 hover:text-primary">Contact</a>
+                <a href="apply.html" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">Apply Now</a>
+            </div>
+            <button class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-primary text-white py-16 md:py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Training Programs</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Comprehensive skill development programs tailored for international job markets</p>
+            <div class="flex justify-center">
+                <a href="#programs" class="bg-white hover:bg-gray-100 text-primary px-8 py-3 rounded-lg text-lg font-semibold transition">Explore Programs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Country Filter -->
+    <section class="py-8 bg-white shadow-sm">
+        <div class="container mx-auto px-4">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">Filter by Destination Country:</h2>
+            <div class="flex flex-wrap gap-3">
+                <button class="country-filter-btn active px-4 py-2 rounded-full border border-primary text-primary hover:bg-primary hover:text-white transition" data-country="all">
+                    All Countries
+                </button>
+                <button class="country-filter-btn px-4 py-2 rounded-full border border-primary text-primary hover:bg-primary hover:text-white transition" data-country="japan">
+                    <img src="https://flagcdn.com/w20/jp.png" alt="Japan" class="inline-block mr-2"> Japan
+                </button>
+                <button class="country-filter-btn px-4 py-2 rounded-full border border-primary text-primary hover:bg-primary hover:text-white transition" data-country="korea">
+                    <img src="https://flagcdn.com/w20/kr.png" alt="South Korea" class="inline-block mr-2"> South Korea
+                </button>
+                <button class="country-filter-btn px-4 py-2 rounded-full border border-primary text-primary hover:bg-primary hover:text-white transition" data-country="middle-east">
+                    <img src="https://flagcdn.com/w20/ae.png" alt="Middle East" class="inline-block mr-2"> Middle East
+                </button>
+                <button class="country-filter-btn px-4 py-2 rounded-full border border-primary text-primary hover:bg-primary hover:text-white transition" data-country="singapore">
+                    <img src="https://flagcdn.com/w20/sg.png" alt="Singapore" class="inline-block mr-2"> Singapore
+                </button>
+                <button class="country-filter-btn px-4 py-2 rounded-full border border-primary text-primary hover:bg-primary hover:text-white transition" data-country="australia">
+                    <img src="https://flagcdn.com/w20/au.png" alt="Australia" class="inline-block mr-2"> Australia
+                </button>
+                <button class="country-filter-btn px-4 py-2 rounded-full border border-primary text-primary hover:bg-primary hover:text-white transition" data-country="canada">
+                    <img src="https://flagcdn.com/w20/ca.png" alt="Canada" class="inline-block mr-2"> Canada
+                </button>
+                <button class="country-filter-btn px-4 py-2 rounded-full border border-primary text-primary hover:bg-primary hover:text-white transition" data-country="europe">
+                    <img src="https://flagcdn.com/w20/eu.png" alt="Europe" class="inline-block mr-2"> Europe
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Programs -->
+    <section id="programs" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Core Training Areas</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Specialized programs designed for specific international job markets</p>
+                <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+            </div>
+
+            <!-- Marine & Shipbuilding -->
+            <div id="marine" class="program-detail-section mb-20">
+                <div class="flex flex-col lg:flex-row gap-8 items-center mb-8">
+                    <div class="lg:w-1/3">
+                        <div class="bg-blue-50 rounded-xl p-8 h-full">
+                            <div class="text-center mb-6">
+                                <i class="fas fa-ship text-blue-600 text-6xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Marine & Shipbuilding</h3>
+                            <p class="text-gray-600 mb-6 text-center">
+                                Comprehensive training for careers in shipyards and marine industries worldwide
+                            </p>
+                            <div class="flex flex-wrap justify-center gap-2">
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Japan</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">South Korea</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Middle East</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Singapore</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-2/3">
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-gray-800 mb-4">Program Details</h4>
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <h5 class="font-semibold text-gray-700 mb-2 flex items-center">
+                                            <i class="fas fa-certificate text-blue-500 mr-2"></i> Certifications
+                                        </h5>
+                                        <ul class="text-gray-600 space-y-2 pl-6">
+                                            <li class="list-disc">International Welding Certification</li>
+                                            <li class="list-disc">Ship Safety Standards</li>
+                                            <li class="list-disc">Marine Electrical Systems</li>
+                                            <li class="list-disc">Rigging & Scaffolding</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-semibold text-gray-700 mb-2 flex items-center">
+                                            <i class="fas fa-clock text-blue-500 mr-2"></i> Duration
+                                        </h5>
+                                        <p class="text-gray-600 mb-4">3-6 months (depending on specialization)</p>
+                                        
+                                        <h5 class="font-semibold text-gray-700 mb-2 flex items-center">
+                                            <i class="fas fa-dollar-sign text-blue-500 mr-2"></i> Average Salary
+                                        </h5>
+                                        <p class="text-gray-600">$1,500 - $3,000/month</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-gray-50 px-6 py-4 border-t border-gray-200">
+                                <h5 class="font-semibold text-gray-700 mb-2">Countries with Highest Demand:</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <div class="flex items-center bg-white px-3 py-1 rounded-full border border-gray-200">
+                                        <img src="https://flagcdn.com/w20/jp.png" alt="Japan" class="mr-2">
+                                        <span>Japan</span>
+                                    </div>
+                                    <div class="flex items-center bg-white px-3 py-1 rounded-full border border-gray-200">
+                                        <img src="https://flagcdn.com/w20/kr.png" alt="South Korea" class="mr-2">
+                                        <span>South Korea</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="text-xl font-bold text-gray-800 mb-4 border-b pb-2">Specializations</h4>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="training-card bg-white rounded-lg shadow-md overflow-hidden border border-gray-200" data-countries="japan,korea,middle-east">
+                        <div class="h-40 bg-blue-100 flex items-center justify-center">
+                            <i class="fas fa-bolt text-blue-600 text-5xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h5 class="font-bold text-lg text-gray-800 mb-2">Marine Welding</h5>
+                            <p class="text-gray-600 mb-4">Specialized welding techniques for shipbuilding and repair</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs">Japan</span>
+                                <span class="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs">Korea</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="training-card bg-white rounded-lg shadow-md overflow-hidden border border-gray-200" data-countries="middle-east,singapore">
+                        <div class="h-40 bg-blue-100 flex items-center justify-center">
+                            <i class="fas fa-plug text-blue-600 text-5xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h5 class="font-bold text-lg text-gray-800 mb-2">Marine Electrical Systems</h5>
+                            <p class="text-gray-600 mb-4">Installation and maintenance of ship electrical systems</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs">Middle East</span>
+                                <span class="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs">Singapore</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="training-card bg-white rounded-lg shadow-md overflow-hidden border border-gray-200" data-countries="japan,korea,middle-east">
+                        <div class="h-40 bg-blue-100 flex items-center justify-center">
+                            <i class="fas fa-anchor text-blue-600 text-5xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h5 class="font-bold text-lg text-gray-800 mb-2">Ship Fitting & Rigging</h5>
+                            <p class="text-gray-600 mb-4">Structural assembly and rigging operations in shipyards</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs">Japan</span>
+                                <span class="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs">Korea</span>
+                                <span class="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs">Middle East</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Construction & Civil Works -->
+            <div id="construction" class="program-detail-section mb-20">
+                <div class="flex flex-col lg:flex-row gap-8 items-center mb-8">
+                    <div class="lg:w-1/3">
+                        <div class="bg-orange-50 rounded-xl p-8 h-full">
+                            <div class="text-center mb-6">
+                                <i class="fas fa-building text-orange-600 text-6xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Construction & Civil Works</h3>
+                            <p class="text-gray-600 mb-6 text-center">
+                                Training for high-demand construction roles in global infrastructure projects
+                            </p>
+                            <div class="flex flex-wrap justify-center gap-2">
+                                <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Middle East</span>
+                                <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Singapore</span>
+                                <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Canada</span>
+                                <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Australia</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-2/3">
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-gray-800 mb-4">Program Details</h4>
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <h5 class="font-semibold text-gray-700 mb-2 flex items-center">
+                                            <i class="fas fa-certificate text-orange-500 mr-2"></i> Certifications
+                                        </h5>
+                                        <ul class="text-gray-600 space-y-2 pl-6">
+                                            <li class="list-disc">Construction Safety Certification</li>
+                                            <li class="list-disc">Heavy Equipment Operation</li>
+                                            <li class="list-disc">Structural Welding</li>
+                                            <li class="list-disc">Building Information Modeling</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-semibold text-gray-700 mb-2 flex items-center">
+                                            <i class="fas fa-clock text-orange-500 mr-2"></i> Duration
+                                        </h5>
+                                        <p class="text-gray-600 mb-4">2-4 months (depending on specialization)</p>
+                                        
+                                        <h5 class="font-semibold text-gray-700 mb-2 flex items-center">
+                                            <i class="fas fa-dollar-sign text-orange-500 mr-2"></i> Average Salary
+                                        </h5>
+                                        <p class="text-gray-600">$1,200 - $2,500/month</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-gray-50 px-6 py-4 border-t border-gray-200">
+                                <h5 class="font-semibold text-gray-700 mb-2">Countries with Highest Demand:</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <div class="flex items-center bg-white px-3 py-1 rounded-full border border-gray-200">
+                                        <img src="https://flagcdn.com/w20/ae.png" alt="Middle East" class="mr-2">
+                                        <span>Middle East</span>
+                                    </div>
+                                    <div class="flex items-center bg-white px-3 py-1 rounded-full border border-gray-200">
+                                        <img src="https://flagcdn.com/w20/sg.png" alt="Singapore" class="mr-2">
+                                        <span>Singapore</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="text-xl font-bold text-gray-800 mb-4 border-b pb-2">Specializations</h4>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="training-card bg-white rounded-lg shadow-md overflow-hidden border border-gray-200" data-countries="middle-east,singapore">
+                        <div class="h-40 bg-orange-100 flex items-center justify-center">
+                            <i class="fas fa-fire-extinguisher text-orange-600 text-5xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h5 class="font-bold text-lg text-gray-800 mb-2">Structural Welding</h5>
+                            <p class="text-gray-600 mb-4">Advanced welding techniques for construction projects</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-orange-50 text-orange-700 px-2 py-1 rounded text-xs">Middle East</span>
+                                <span class="bg-orange-50 text-orange-700 px-2 py-1 rounded text-xs">Singapore</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="training-card bg-white rounded-lg shadow-md overflow-hidden border border-gray-200" data-countries="middle-east,canada,australia">
+                        <div class="h-40 bg-orange-100 flex items-center justify-center">
+                            <i class="fas fa-tools text-orange-600 text-5xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h5 class="font-bold text-lg text-gray-800 mb-2">Electrical Installation</h5>
+                            <p class="text-gray-600 mb-4">Commercial and residential electrical systems</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-orange-50 text-orange-700 px-2 py-1 rounded text-xs">Middle East</span>
+                                <span class="bg-orange-50 text-orange-700 px-2 py-1 rounded text-xs">Canada</span>
+                                <span class="bg-orange-50 text-orange-700 px-2 py-1 rounded text-xs">Australia</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="training-card bg-white rounded-lg shadow-md overflow-hidden border border-gray-200" data-countries="middle-east,singapore">
+                        <div class="h-40 bg-orange-100 flex items-center justify-center">
+                            <i class="fas fa-water text-orange-600 text-5xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h5 class="font-bold text-lg text-gray-800 mb-2">Plumbing & Pipe Fitting</h5>
+                            <p class="text-gray-600 mb-4">Commercial plumbing systems installation</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-orange-50 text-orange-700 px-2 py-1 rounded text-xs">Middle East</span>
+                                <span class="bg-orange-50 text-orange-700 px-2 py-1 rounded text-xs">Singapore</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Industrial & Technical -->
+            <div id="industrial" class="program-detail-section mb-20">
+                <div class="flex flex-col lg:flex-row gap-8 items-center mb-8">
+                    <div class="lg:w-1/3">
+                        <div class="bg-green-50 rounded-xl p-8 h-full">
+                            <div class="text-center mb-6">
+                                <i class="fas fa-industry text-green-600 text-6xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Industrial & Technical</h3>
+                            <p class="text-gray-600 mb-6 text-center">
+                                Specialized technical training for manufacturing and industrial sectors
+                            </p>
+                            <div class="flex flex-wrap justify-center gap-2">
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Japan</span>
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Middle East</span>
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Canada</span>
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Europe</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-2/3">
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-gray-800 mb-4">Program Details</h4>
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <h5 class="font-semibold text-gray-700 mb-2 flex items-center">
+                                            <i class="fas fa-certificate text-green-500 mr-2"></i> Certifications
+                                        </h5>
+                                        <ul class="text-gray-600 space-y-2 pl-6">
+                                            <li class="list-disc">PLC Programming Certification</li>
+                                            <li class="list-disc">Industrial Safety Standards</li>
+                                            <li class="list-disc">HVAC Systems</li>
+                                            <li class="list-disc">Quality Control</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-semibold text-gray-700 mb-2 flex items-center">
+                                            <i class="fas fa-clock text-green-500 mr-2"></i> Duration
+                                        </h5>
+                                        <p class="text-gray-600 mb-4">3-5 months (depending on specialization)</p>
+                                        
+                                        <h5 class="font-semibold text-gray-700 mb-2 flex items-center">
+                                            <i class="fas fa-dollar-sign text-green-500 mr-2"></i> Average Salary
+                                        </h5>
+                                        <p class="text-gray-600">$1,800 - $3,500/month</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-gray-50 px-6 py-4 border-t border-gray-200">
+                                <h5 class="font-semibold text-gray-700 mb-2">Countries with Highest Demand:</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <div class="flex items-center bg-white px-3 py-1 rounded-full border border-gray-200">
+                                        <img src="https://flagcdn.com/w20/jp.png" alt="Japan" class="mr-2">
+                                        <span>Japan</span>
+                                    </div>
+                                    <div class="flex items-center bg-white px-3 py-1 rounded-full border border-gray-200">
+                                        <img src="https://flagcdn.com/w20/eu.png" alt="Europe" class="mr-2">
+                                        <span>Europe</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="text-xl font-bold text-gray-800 mb-4 border-b pb-2">Specializations</h4>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="training-card bg-white rounded-lg shadow-md overflow-hidden border border-gray-200" data-countries="japan,europe">
+                        <div class="h-40 bg-green-100 flex items-center justify-center">
+                            <i class="fas fa-microchip text-green-600 text-5xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h5 class="font-bold text-lg text-gray-800 mb-2">PLC Programming</h5>
+                            <p class="text-gray-600 mb-4">Industrial automation and control systems</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-green-50 text-green-700 px-2 py-1 rounded text-xs">Japan</span>
+                                <span class="bg-green-50 text-green-700 px-2 py-1 rounded text-xs">Europe</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="training-card bg-white rounded-lg shadow-md overflow-hidden border border-gray-200" data-countries="middle-east,canada">
+                        <div class="h-40 bg-green-100 flex items-center justify-center">
+                            <i class="fas fa-snowflake text-green-600 text-5xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h5 class="font-bold text-lg text-gray-800 mb-2">Ammonia & Cooling Systems</h5>
+                            <p class="text-gray-600 mb-4">Industrial refrigeration system maintenance</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-green-50 text-green-700 px-2 py-1 rounded text-xs">Middle East</span>
+                                <span class="bg-green-50 text-green-700 px-2 py-1 rounded text-xs">Canada</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="training-card bg-white rounded-lg shadow-md overflow-hidden border border-gray-200" data-countries="japan,middle-east,europe">
+                        <div class="h-40 bg-green-100 flex items-center justify-center">
+                            <i class="fas fa-cogs text-green-600 text-5xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h5 class="font-bold text-lg text-gray-800 mb-2">Industrial Maintenance</h5>
+                            <p class="text-gray-600 mb-4">Preventive maintenance for manufacturing equipment</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-green-50 text-green-700 px-2 py-1 rounded text-xs">Japan</span>
+                                <span class="bg-green-50 text-green-700 px-2 py-1 rounded text-xs">Middle East</span>
+                                <span class="bg-green-50 text-green-700 px-2 py-1 rounded text-xs">Europe</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hospitality -->
+            <div id="hospitality" class="program-detail-section mb-20">
+                <div class="flex flex-col lg:flex-row gap-8 items-center mb-8">
+                    <div class="lg:w-1/3">
+                        <div class="bg-red-50 rounded-xl p-8 h-full">
+                            <div class="text-center mb-6">
+                                <i class="fas fa-utensils text-red-600 text-6xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Hospitality</h3>
+                            <p class="text-gray-600 mb-6 text-center">
+                                Training for luxury hotel and restaurant positions worldwide
+                            </p>
+                            <div class="flex flex-wrap justify-center gap-2">
+                                <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Middle East</span>
+                                <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Singapore</span>
+                                <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Australia</span>
+                                <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Canada</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-2/3">
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-gray-800 mb-4">Program Details</h4>
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <h5 class="font-semibold text-gray-700 mb-2 flex items-center">
+                                            <i class="fas fa-certificate text-red-500 mr-2"></i> Certifications
+                                        </h5>
+                                        <ul class="text-gray-600 space-y-2 pl-6">
+                                            <li class="list-disc">International Hospitality Certification</li>
+                                            <li class="list-disc">Food Safety & Hygiene</li>
+                                            <li class="list-disc">Wine & Beverage Knowledge</li>
+                                            <li class="list-disc">Customer Service Excellence</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-semibold text-gray-700 mb-2 flex items-center">
+                                            <i class="fas fa-clock text-red-500 mr-2"></i> Duration
+                                        </h5>
+                                        <p class="text-gray-600 mb-4">2-3 months (depending on specialization)</p>
+                                        
+                                        <h5 class="font-semibold text-gray-700 mb-2 flex items-center">
+                                            <i class="fas fa-dollar-sign text-red-500 mr-2"></i> Average Salary
+                                        </h5>
+                                        <p class="text-gray-600">$1,000 - $2,500/month</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-gray-50 px-6 py-4 border-t border-gray-200">
+                                <h5 class="font-semibold text-gray-700 mb-2">Countries with Highest Demand:</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <div class="flex items-center bg-white px-3 py-1 rounded-full border border-gray-200">
+                                        <img src="https://flagcdn.com/w20/ae.png" alt="Middle East" class="mr-2">
+                                        <span>Middle East</span>
+                                    </div>
+                                    <div class="flex items-center bg-white px-3 py-1 rounded-full border border-gray-200">
+                                        <img src="https://flagcdn.com/w20/sg.png" alt="Singapore" class="mr-2">
+                                        <span>Singapore</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="text-xl font-bold text-gray-800 mb-4 border-b pb-2">Specializations</h4>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="training-card bg-white rounded-lg shadow-md overflow-hidden border border-gray-200" data-countries="middle-east,singapore">
+                        <div class="h-40 bg-red-100 flex items-center justify-center">
+                            <i class="fas fa-concierge-bell text-red-600 text-5xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h5 class="font-bold text-lg text-gray-800 mb-2">Housekeeping</h5>
+                            <p class="text-gray-600 mb-4">Luxury hotel housekeeping and room service</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-red-50 text-red-700 px-2 py-1 rounded text-xs">Middle East</span>
+                                <span class="bg-red-50 text-red-700 px-2 py-1 rounded text-xs">Singapore</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="training-card bg-white rounded-lg shadow-md overflow-hidden border border-gray-200" data-countries="middle-east,australia,canada">
+                        <div class="h-40 bg-red-100 flex items-center justify-center">
+                            <i class="fas fa-cocktail text-red-600 text-5xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h5 class="font-bold text-lg text-gray-800 mb-2">Food & Beverage Services</h5>
+                            <p class="text-gray-600 mb-4">Fine dining service and beverage management</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-red-50 text-red-700 px-2 py-1 rounded text-xs">Middle East</span>
+                                <span class="bg-red-50 text-red-700 px-2 py-1 rounded text-xs">Australia</span>
+                                <span class="bg-red-50 text-red-700 px-2 py-1 rounded text-xs">Canada</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="training-card bg-white rounded-lg shadow-md overflow-hidden border border-gray-200" data-countries="middle-east,singapore">
+                        <div class="h-40 bg-red-100 flex items-center justify-center">
+                            <i class="fas fa-bread-slice text-red-600 text-5xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h5 class="font-bold text-lg text-gray-800 mb-2">Bakery & Pastry</h5>
+                            <p class="text-gray-600 mb-4">Artisan baking and pastry arts</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-red-50 text-red-700 px-2 py-1 rounded text-xs">Middle East</span>
+                                <span class="bg-red-50 text-red-700 px-2 py-1 rounded text-xs">Singapore</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Healthcare & Caregiving -->
+            <div id="healthcare" class="program-detail-section">
+                <div class="flex flex-col lg:flex-row gap-8 items-center mb-8">
+                    <div class="lg:w-1/3">
+                        <div class="bg-teal-50 rounded-xl p-8 h-full">
+                            <div class="text-center mb-6">
+                                <i class="fas fa-heartbeat text-teal-600 text-6xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Healthcare & Caregiving</h3>
+                            <p class="text-gray-600 mb-6 text-center">
+                                Compassionate care training for elderly and healthcare support roles
+                            </p>
+                            <div class="flex flex-wrap justify-center gap-2">
+                                <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">Japan</span>
+                                <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">Canada</span>
+                                <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">Australia</span>
+                                <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">Europe</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-2/3">
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-gray-800 mb-4">Program Details</h4>
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <h5 class="font-semibold text-gray-700 mb-2 flex items-center">
+                                            <i class="fas fa-certificate text-teal-500 mr-2"></i> Certifications
+                                        </h5>
+                                        <ul class="text-gray-600 space-y-2 pl-6">
+                                            <li class="list-disc">Certified Nursing Assistant</li>
+                                            <li class="list-disc">Elderly Care Certification</li>
+                                            <li class="list-disc">First Aid & CPR</li>
+                                            <li class="list-disc">Dementia Care</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-semibold text-gray-700 mb-2 flex items-center">
+                                            <i class="fas fa-clock text-teal-500 mr-2"></i> Duration
+                                        </h5>
+                                        <p class="text-gray-600 mb-4">4-6 months (including language training)</p>
+                                        
+                                        <h5 class="font-semibold text-gray-700 mb-2 flex items-center">
+                                            <i class="fas fa-dollar-sign text-teal-500 mr-2"></i> Average Salary
+                                        </h5>
+                                        <p class="text-gray-600">$1,500 - $2,800/month</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-gray-50 px-6 py-4 border-t border-gray-200">
+                                <h5 class="font-semibold text-gray-700 mb-2">Countries with Highest Demand:</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    <div class="flex items-center bg-white px-3 py-1 rounded-full border border-gray-200">
+                                        <img src="https://flagcdn.com/w20/jp.png" alt="Japan" class="mr-2">
+                                        <span>Japan</span>
+                                    </div>
+                                    <div class="flex items-center bg-white px-3 py-1 rounded-full border border-gray-200">
+                                        <img src="https://flagcdn.com/w20/ca.png" alt="Canada" class="mr-2">
+                                        <span>Canada</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="text-xl font-bold text-gray-800 mb-4 border-b pb-2">Specializations</h4>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="training-card bg-white rounded-lg shadow-md overflow-hidden border border-gray-200" data-countries="japan">
+                        <div class="h-40 bg-teal-100 flex items-center justify-center">
+                            <i class="fas fa-user-nurse text-teal-600 text-5xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h5 class="font-bold text-lg text-gray-800 mb-2">Nurse Attendant</h5>
+                            <p class="text-gray-600 mb-4">Supporting nurses in hospital settings</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-teal-50 text-teal-700 px-2 py-1 rounded text-xs">Japan</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="training-card bg-white rounded-lg shadow-md overflow-hidden border border-gray-200" data-countries="japan,canada,australia,europe">
+                        <div class="h-40 bg-teal-100 flex items-center justify-center">
+                            <i class="fas fa-hands-helping text-teal-600 text-5xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h5 class="font-bold text-lg text-gray-800 mb-2">Elderly Caregiver</h5>
+                            <p class="text-gray-600 mb-4">Compassionate care for senior citizens</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-teal-50 text-teal-700 px-2 py-1 rounded text-xs">Japan</span>
+                                <span class="bg-teal-50 text-teal-700 px-2 py-1 rounded text-xs">Canada</span>
+                                <span class="bg-teal-50 text-teal-700 px-2 py-1 rounded text-xs">Australia</span>
+                                <span class="bg-teal-50 text-teal-700 px-2 py-1 rounded text-xs">Europe</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="training-card bg-white rounded-lg shadow-md overflow-hidden border border-gray-200" data-countries="middle-east,canada,australia">
+                        <div class="h-40 bg-teal-100 flex items-center justify-center">
+                            <i class="fas fa-microscope text-teal-600 text-5xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h5 class="font-bold text-lg text-gray-800 mb-2">Lab Assistant</h5>
+                            <p class="text-gray-600 mb-4">Medical laboratory support services</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-teal-50 text-teal-700 px-2 py-1 rounded text-xs">Middle East</span>
+                                <span class="bg-teal-50 text-teal-700 px-2 py-1 rounded text-xs">Canada</span>
+                                <span class="bg-teal-50 text-teal-700 px-2 py-1 rounded text-xs">Australia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-12 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">Ready to Start Your International Career?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Our admissions team is ready to guide you through the application process and help you choose the right program.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="index.html#contact" class="bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded-lg text-lg font-semibold transition">
+                    <i class="fas fa-envelope mr-2"></i> Contact Us
+                </a>
+                <a href="#" class="bg-purple-700 hover:bg-purple-800 text-white px-8 py-3 rounded-lg text-lg font-semibold transition">
+                    <i class="fas fa-file-alt mr-2"></i> Apply Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">UI</span>
+                        </div>
+                        <span class="text-xl font-bold">UISEL</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Universal Institute of Skills & Entrepreneurship Ltd. (UISEL) - Connecting Bangladeshi talent with global opportunities.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Training Programs</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#marine" class="text-gray-400 hover:text-white transition">Marine & Shipbuilding</a></li>
+                        <li><a href="#construction" class="text-gray-400 hover:text-white transition">Construction & Civil Works</a></li>
+                        <li><a href="#industrial" class="text-gray-400 hover:text-white transition">Industrial & Technical</a></li>
+                        <li><a href="#hospitality" class="text-gray-400 hover:text-white transition">Hospitality</a></li>
+                        <li><a href="#healthcare" class="text-gray-400 hover:text-white transition">Healthcare & Caregiving</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="index.html#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-white transition">Our Services</a></li>
+                        <li><a href="index.html#global" class="text-gray-400 hover:text-white transition">Global Reach</a></li>
+                        <li><a href="index.html#contact" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>123 Skill Street, Training District, Dhaka, Bangladesh</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-3"></i>
+                            <span>+880 1711 752198</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3"></i>
+                            <span>info@uisel.edu.bd</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">
+                    &copy; 2023 Universal Institute of Skills & Entrepreneurship Ltd. (UISEL). All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Country filter functionality
+            const filterButtons = document.querySelectorAll('.country-filter-btn');
+            const trainingCards = document.querySelectorAll('.training-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active', 'bg-primary', 'text-white'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active', 'bg-primary', 'text-white');
+                    
+                    const country = this.dataset.country;
+                    
+                    // Show/hide training cards based on selection
+                    trainingCards.forEach(card => {
+                        if (country === 'all') {
+                            card.style.display = 'block';
+                        } else {
+                            const cardCountries = card.dataset.countries.split(',');
+                            if (cardCountries.includes(country)) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

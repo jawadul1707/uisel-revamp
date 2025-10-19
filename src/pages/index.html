@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UISEL - Universal Institute of Skills & Entrepreneurship Ltd.</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: '#18196b',
+                            'purple-600': '#18196b',
+                            'purple-700': '#14155a',
+                            'purple-800': '#101146',
+                            'purple-100': '#e3e4f7',
+                            'purple-200': '#c7c9ee',
+                            'purple-300': '#abadd6',
+                            'purple-50': '#f5f6fa',
+                        }
+                    }
+                }
+            }
+        </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .flag-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .training-area-card {
+            transition: all 0.3s ease;
+        }
+        .training-area-card:hover {
+            transform: scale(1.03);
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-xl">UI</span>
+                </div>
+                <span class="text-xl font-bold text-primary">UISEL</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-primary font-semibold">Home</a>
+                <a href="index.html#about" class="text-gray-700 hover:text-primary">About Us</a>
+                <a href="index.html#services" class="text-gray-700 hover:text-primary">Services</a>
+                <a href="training.html" class="text-gray-700 hover:text-primary">Training Programs</a>
+                <a href="index.html#global" class="text-gray-700 hover:text-primary">Global Reach</a>
+                <a href="index.html#contact" class="text-gray-700 hover:text-primary">Contact</a>
+                <a href="apply.html" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">Apply Now</a>
+            </div>
+            <button class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Global Skills for a Connected Future</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Connecting Bangladeshi talent with international opportunities through world-class training and ethical recruitment.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-primary hover:bg-purple-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition">Contact Us</a>
+                <a href="#training" class="bg-white hover:bg-gray-100 text-primary px-8 py-3 rounded-lg text-lg font-semibold transition">Our Programs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Who We Are</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" 
+                         alt="UISEL Team" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+                <div class="lg:w-1/2">
+                    <p class="text-lg text-gray-700 mb-6">
+                        At UISEL, we believe that skills have the power to change lives. Our purpose is simple but powerful — to connect the talent of Bangladesh with the opportunities of the world.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6">
+                        We are more than just a training institute. We are a bridge between ambition and achievement, guiding young people and professionals towards meaningful international careers.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-8">
+                        For over a decade, we have been shaping the future of the Bangladeshi workforce by offering world-class training programs and ensuring responsible migration pathways. With every graduate we prepare, and every worker we deploy, we contribute to building an inclusive global workforce that values ethics, transparency, and sustainability.
+                    </p>
+                    <div class="bg-purple-100 border-l-4 border-primary p-4">
+                        <p class="text-primary italic">
+                            "At UISEL, success is not measured only in numbers, but in stories — stories of caregivers in Japan, engineers in the Middle East, or hospitality professionals in Singapore, each thriving because they dared to dream and trusted UISEL to lead the way."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">What We Do</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Our comprehensive workforce solutions prepare individuals for success at every stage of their international career journey.</p>
+                <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Service Card 1 -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 transition duration-300">
+                    <div class="md:flex">
+                        <div class="md:flex-shrink-0 bg-purple-100 flex items-center justify-center p-6">
+                            <i class="fas fa-graduation-cap text-primary text-4xl"></i>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">International Standard Skills Training</h3>
+                            <p class="text-gray-600">
+                                Our technical and vocational training programs are developed in alignment with destination country standards. This ensures that every trainee gains not just skills, but also global employability.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 transition duration-300">
+                    <div class="md:flex">
+                        <div class="md:flex-shrink-0 bg-purple-100 flex items-center justify-center p-6">
+                            <i class="fas fa-language text-purple-600 text-4xl"></i>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Language Proficiency Programs</h3>
+                            <p class="text-gray-600">
+                                We specialize in training candidates in Japanese, Korean, Arabic, and English for workplace communication. We teach culture, etiquette, and communication styles to ensure adaptability abroad.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 transition duration-300">
+                    <div class="md:flex">
+                        <div class="md:flex-shrink-0 bg-purple-100 flex items-center justify-center p-6">
+                            <i class="fas fa-file-alt text-purple-600 text-4xl"></i>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Responsible Recruitment & Visa Support</h3>
+                            <p class="text-gray-600">
+                                We stand for ethical and transparent migration. From documentation to visa processing, we work legally and directly with trusted employers, ensuring smooth and exploitation-free migration journeys.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 transition duration-300">
+                    <div class="md:flex">
+                        <div class="md:flex-shrink-0 bg-purple-100 flex items-center justify-center p-6">
+                            <i class="fas fa-briefcase text-purple-600 text-4xl"></i>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Placement Preparation</h3>
+                            <p class="text-gray-600">
+                                Our programs include SSW, EPS, G2G, TITP and other international schemes. We prepare candidates with mock interviews, role plays, and industry simulations so they are job-ready from day one.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 5 -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 transition duration-300">
+                    <div class="md:flex">
+                        <div class="md:flex-shrink-0 bg-purple-100 flex items-center justify-center p-6">
+                            <i class="fas fa-comments text-purple-600 text-4xl"></i>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Soft Skills & Interview Coaching</h3>
+                            <p class="text-gray-600">
+                                Global careers demand more than technical skills. We train our students in CV writing, professional behavior, teamwork, and cultural adaptation so they can stand out in the international workplace.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 6 -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 transition duration-300">
+                    <div class="md:flex">
+                        <div class="md:flex-shrink-0 bg-purple-100 flex items-center justify-center p-6">
+                            <i class="fas fa-globe text-purple-600 text-4xl"></i>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Overseas Job Placement & Support</h3>
+                            <p class="text-gray-600">
+                                UISEL goes beyond training. We connect workers with reliable overseas employers and provide ongoing support after deployment — from onboarding guidance to welfare assistance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Reach Section -->
+    <section id="global" class="py-16 bg-purple-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-purple-800 mb-4">Our Global Reach</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Trusted by international employers, training institutions, and government bodies worldwide</p>
+                <div class="w-20 h-1 bg-purple-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-6 mb-12">
+                <div class="text-center">
+                    <img src="https://flagcdn.com/w80/jp.png" alt="Japan" class="flag-icon mx-auto mb-2">
+                    <span class="text-gray-700 font-medium">Japan</span>
+                </div>
+                <div class="text-center">
+                    <img src="https://flagcdn.com/w80/kr.png" alt="South Korea" class="flag-icon mx-auto mb-2">
+                    <span class="text-gray-700 font-medium">South Korea</span>
+                </div>
+                <div class="text-center">
+                    <img src="https://flagcdn.com/w80/ae.png" alt="UAE" class="flag-icon mx-auto mb-2">
+                    <span class="text-gray-700 font-medium">Middle East</span>
+                </div>
+                <div class="text-center">
+                    <img src="https://flagcdn.com/w80/sg.png" alt="Singapore" class="flag-icon mx-auto mb-2">
+                    <span class="text-gray-700 font-medium">Singapore</span>
+                </div>
+                <div class="text-center">
+                    <img src="https://flagcdn.com/w80/au.png" alt="Australia" class="flag-icon mx-auto mb-2">
+                    <span class="text-gray-700 font-medium">Australia</span>
+                </div>
+                <div class="text-center">
+                    <img src="https://flagcdn.com/w80/ca.png" alt="Canada" class="flag-icon mx-auto mb-2">
+                    <span class="text-gray-700 font-medium">Canada</span>
+                </div>
+                <div class="text-center">
+                    <img src="https://flagcdn.com/w80/eu.png" alt="Europe" class="flag-icon mx-auto mb-2">
+                    <span class="text-gray-700 font-medium">Europe</span>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-md p-8 max-w-4xl mx-auto">
+                <p class="text-lg text-gray-700 mb-6">
+                    Our reputation is built on consistent quality, transparency, and reliability. Employers worldwide trust UISEL because we provide them with workers who are not only skilled, but also responsible, disciplined, and adaptable to international work cultures.
+                </p>
+                <p class="text-lg text-gray-700 font-semibold text-center">
+                    From Bangladesh to the world, our mission is clear: to create a globally mobile workforce with Global Skills for a Connected Future.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Excellence Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-purple-800 mb-4">Training Excellence at UISEL</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We don't just train people for jobs — we transform individuals into global professionals</p>
+                <div class="w-20 h-1 bg-purple-600 mx-auto mt-4"></div>
+            </div>
+            
+            <!-- Promo Video -->
+            <div class="video-container rounded-xl shadow-xl overflow-hidden mb-12">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-purple-50 rounded-lg p-6 border border-purple-100">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-school text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Modern Training Infrastructure</h3>
+                    <p class="text-gray-600">State-of-the-art classrooms, technical labs, and simulation workshops equipped with the latest technology.</p>
+                </div>
+                
+                <div class="bg-purple-50 rounded-lg p-6 border border-purple-100">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-chalkboard-teacher text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Certified Trainers</h3>
+                    <p class="text-gray-600">Experts with international experience who bring real-world knowledge to the classroom.</p>
+                </div>
+                
+                <div class="bg-purple-50 rounded-lg p-6 border border-purple-100">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-tools text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Hands-On Practice</h3>
+                    <p class="text-gray-600">Every trainee learns through practical application, not just theory, with industry-standard equipment.</p>
+                </div>
+                
+                <div class="bg-purple-50 rounded-lg p-6 border border-purple-100">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-laptop-code text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Language & Soft Skill Labs</h3>
+                    <p class="text-gray-600">Interactive sessions with role-plays, digital tools, and interview practice to build confidence.</p>
+                </div>
+                
+                <div class="bg-purple-50 rounded-lg p-6 border border-purple-100">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-home text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Comprehensive Student Support</h3>
+                    <p class="text-gray-600">Hostel facilities, mid-day meals, and welfare services ensure trainees focus fully on learning.</p>
+                </div>
+                
+                <div class="bg-purple-50 rounded-lg p-6 border border-purple-100">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-globe-asia text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Global Certification</h3>
+                    <p class="text-gray-600">Internationally recognized certifications that validate skills and enhance employability worldwide.</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-purple-100 rounded-xl p-8 text-center max-w-4xl mx-auto">
+                <p class="text-xl text-purple-800 font-semibold">
+                    Our goal is to ensure that every candidate leaves UISEL with confidence, competence, and readiness to thrive abroad.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose UISEL Section -->
+    <section class="py-16 bg-purple-800 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose UISEL?</h2>
+                <p class="text-xl max-w-3xl mx-auto">Choosing UISEL means choosing a partner who values your future</p>
+                <div class="w-20 h-1 bg-white mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white bg-opacity-10 rounded-lg p-6 border border-purple-300 border-opacity-30">
+                    <div class="flex items-start">
+                        <i class="fas fa-check-circle text-purple-200 mt-1 mr-3"></i>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Decade-long Expertise</h3>
+                            <p class="text-purple-100">Proven track record in workforce development and overseas employment.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 rounded-lg p-6 border border-purple-300 border-opacity-30">
+                    <div class="flex items-start">
+                        <i class="fas fa-check-circle text-purple-200 mt-1 mr-3"></i>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Ethical Recruitment</h3>
+                            <p class="text-purple-100">Legal, transparent processes that protect candidates from exploitation.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 rounded-lg p-6 border border-purple-300 border-opacity-30">
+                    <div class="flex items-start">
+                        <i class="fas fa-check-circle text-purple-200 mt-1 mr-3"></i>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Affordable Programs</h3>
+                            <p class="text-purple-100">Quality training designed for maximum career outcomes at accessible costs.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 rounded-lg p-6 border border-purple-300 border-opacity-30">
+                    <div class="flex items-start">
+                        <i class="fas fa-check-circle text-purple-200 mt-1 mr-3"></i>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Employer-Driven Curriculum</h3>
+                            <p class="text-purple-100">Training aligned with international industry needs and standards.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 rounded-lg p-6 border border-purple-300 border-opacity-30">
+                    <div class="flex items-start">
+                        <i class="fas fa-check-circle text-purple-200 mt-1 mr-3"></i>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Global Success Stories</h3>
+                            <p class="text-purple-100">Thousands of trained professionals thriving in international careers.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 rounded-lg p-6 border border-purple-300 border-opacity-30">
+                    <div class="flex items-start">
+                        <i class="fas fa-check-circle text-purple-200 mt-1 mr-3"></i>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">End-to-End Support</h3>
+                            <p class="text-purple-100">Personalized guidance from admission to post-deployment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="text-xl font-semibold mb-6">
+                    We don't just prepare people for jobs; we prepare them for lifelong careers beyond borders.
+                </p>
+                <a href="#contact" class="bg-white text-purple-800 hover:bg-gray-100 px-8 py-3 rounded-lg text-lg font-semibold transition inline-block">Start Your Journey</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-purple-800 mb-4">Our Success Stories</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Each UISEL success story is proof of our purpose</p>
+                <div class="w-20 h-1 bg-purple-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center">
+                        <i class="fas fa-user-nurse text-purple-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Caregivers in Japan</h3>
+                        <p class="text-gray-600">Supporting elderly communities with dignity and professional care.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center">
+                        <i class="fas fa-hard-hat text-purple-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Welders & Technicians</h3>
+                        <p class="text-gray-600">Powering the Middle East's infrastructure growth with skilled labor.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center">
+                        <i class="fas fa-concierge-bell text-purple-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Hospitality Professionals</h3>
+                        <p class="text-gray-600">Providing world-class service in Singapore's luxury hotels.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-purple-600 text-white rounded-xl p-8 text-center max-w-4xl mx-auto">
+                <p class="text-2xl font-bold mb-4">2,000+ trained professionals secured international employment through UISEL in just the last 3 years</p>
+                <p class="text-lg">
+                    Every individual we train becomes a global ambassador for Bangladesh's talent and potential.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Areas Section -->
+    <section id="training" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-purple-800 mb-4">Our Core Training Areas</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We don't just teach skills — we create global professionals</p>
+                <div class="w-20 h-1 bg-purple-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Marine & Shipbuilding -->
+                <div class="training-area-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:border-purple-200">
+                    <div class="h-48 bg-blue-50 flex items-center justify-center">
+                        <i class="fas fa-ship text-blue-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Marine & Shipbuilding</h3>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                <span>Marine Welding</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                <span>Electrical & Mechanical Work</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                <span>Ship Fitting & Rigging</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                <span>Safety & Firefighting</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                <span>Shipbuilding Fabrication</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Construction & Civil Works -->
+                <div class="training-area-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:border-purple-200">
+                    <div class="h-48 bg-orange-50 flex items-center justify-center">
+                        <i class="fas fa-building text-orange-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Construction & Civil Works</h3>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-orange-500 mt-1 mr-2"></i>
+                                <span>Structural Welding</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-orange-500 mt-1 mr-2"></i>
+                                <span>Electrical Installation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-orange-500 mt-1 mr-2"></i>
+                                <span>Plumbing & Pipe Fitting</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-orange-500 mt-1 mr-2"></i>
+                                <span>Ceiling & Plaster Work</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-orange-500 mt-1 mr-2"></i>
+                                <span>Painting & Grinding</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-orange-500 mt-1 mr-2"></i>
+                                <span>Civil Supervision</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Industrial & Technical -->
+                <div class="training-area-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:border-purple-200">
+                    <div class="h-48 bg-green-50 flex items-center justify-center">
+                        <i class="fas fa-industry text-green-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Industrial & Technical</h3>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>PLC Programming</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Ammonia & Cooling Systems</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Forklift & Crane Operations</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Boom Supervisor</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Signalman</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Surveyor</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Hospitality -->
+                <div class="training-area-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:border-purple-200">
+                    <div class="h-48 bg-red-50 flex items-center justify-center">
+                        <i class="fas fa-utensils text-red-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Hospitality</h3>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-red-500 mt-1 mr-2"></i>
+                                <span>Housekeeping</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-red-500 mt-1 mr-2"></i>
+                                <span>Food & Beverage Services</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-red-500 mt-1 mr-2"></i>
+                                <span>Bartender & Barista</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-red-500 mt-1 mr-2"></i>
+                                <span>Bakery</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Healthcare & Caregiving -->
+                <div class="training-area-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:border-purple-200">
+                    <div class="h-48 bg-teal-50 flex items-center justify-center">
+                        <i class="fas fa-heartbeat text-teal-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Healthcare & Caregiving</h3>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-teal-500 mt-1 mr-2"></i>
+                                <span>Nurse Attendant</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-teal-500 mt-1 mr-2"></i>
+                                <span>Elderly Caregiver</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-teal-500 mt-1 mr-2"></i>
+                                <span>Lab Assistant</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Customized Training -->
+                <div class="training-area-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:border-purple-200">
+                    <div class="h-48 bg-purple-50 flex items-center justify-center">
+                        <i class="fas fa-cogs text-purple-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Customized Training Solutions</h3>
+                        <p class="text-gray-600 mb-4">UISEL works closely with international employers and governments to design role-specific training programs.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-500 mt-1 mr-2"></i>
+                                <span>Trainer-led & Employer-verified</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-500 mt-1 mr-2"></i>
+                                <span>Practical & immersive with real-world simulations</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-500 mt-1 mr-2"></i>
+                                <span>Tech-enabled with digital classrooms</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-500 mt-1 mr-2"></i>
+                                <span>Student-centered with full welfare support</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accreditations Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-purple-800 mb-4">Our Accreditations</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Recognized by leading national and international organizations</p>
+                <div class="w-20 h-1 bg-purple-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 flex items-center justify-center h-32">
+                    <img src="https://via.placeholder.com/150x80?text=BMET" alt="BMET" class="h-16 object-contain">
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 flex items-center justify-center h-32">
+                    <img src="https://via.placeholder.com/150x80?text=MoEWOE" alt="MoEWOE" class="h-16 object-contain">
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 flex items-center justify-center h-32">
+                    <img src="https://via.placeholder.com/150x80?text=NSDA" alt="NSDA" class="h-16 object-contain">
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 flex items-center justify-center h-32">
+                    <img src="https://via.placeholder.com/150x80?text=BCA" alt="BCA" class="h-16 object-contain">
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 flex items-center justify-center h-32">
+                    <img src="https://via.placeholder.com/150x80?text=SETSCO" alt="SETSCO" class="h-16 object-contain">
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 flex items-center justify-center h-32">
+                    <img src="https://via.placeholder.com/150x80?text=MOM" alt="MOM" class="h-16 object-contain">
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 flex items-center justify-center h-32">
+                    <img src="https://via.placeholder.com/150x80?text=WSQ" alt="WSQ" class="h-16 object-contain">
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 flex items-center justify-center h-32">
+                    <img src="https://via.placeholder.com/150x80?text=OTIT" alt="OTIT" class="h-16 object-contain">
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 flex items-center justify-center h-32">
+                    <img src="https://via.placeholder.com/150x80?text=JITCO" alt="JITCO" class="h-16 object-contain">
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 flex items-center justify-center h-32">
+                    <img src="https://via.placeholder.com/150x80?text=JLPT" alt="JLPT" class="h-16 object-contain">
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 flex items-center justify-center h-32">
+                    <img src="https://via.placeholder.com/150x80?text=ISO" alt="ISO" class="h-16 object-contain">
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 flex items-center justify-center h-32">
+                    <img src="https://via.placeholder.com/150x80?text=ILO" alt="ILO" class="h-16 object-contain">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-purple-800 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Contact Us</h2>
+                <p class="text-xl max-w-3xl mx-auto">Let's build your global future together</p>
+                <div class="w-20 h-1 bg-white mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Get In Touch</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-purple-700 rounded-full w-10 h-10 flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Address</h4>
+                                <p class="text-purple-100">123 Skill Street, Training District<br>Dhaka, Bangladesh</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-purple-700 rounded-full w-10 h-10 flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Phone</h4>
+                                <p class="text-purple-100">+880 1711 752198</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-purple-700 rounded-full w-10 h-10 flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Email</h4>
+                                <p class="text-purple-100">info@uisel.edu.bd</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-purple-700 rounded-full w-10 h-10 flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Website</h4>
+                                <p class="text-purple-100">www.uisel.edu.bd</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold text-lg mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-purple-700 hover:bg-purple-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-purple-700 hover:bg-purple-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" class="bg-purple-700 hover:bg-purple-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="bg-purple-700 hover:bg-purple-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-xl p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Send Us a Message</h3>
+                    <form>
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="interest" class="block text-gray-700 font-medium mb-2">Training Interest</label>
+                            <select id="interest" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+                                <option value="">Select a program</option>
+                                <option value="marine">Marine & Shipbuilding</option>
+                                <option value="construction">Construction & Civil Works</option>
+                                <option value="industrial">Industrial & Technical</option>
+                                <option value="hospitality">Hospitality</option>
+                                <option value="healthcare">Healthcare & Caregiving</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-4 rounded-lg transition">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-12 bg-purple-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">Admissions Open – Limited Seats Available!</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Call us today or visit our office to take the first step toward your international career.</p>
+            <a href="tel:+8801711752198" class="bg-white text-purple-800 hover:bg-gray-100 px-8 py-3 rounded-lg text-lg font-semibold transition inline-block mr-4">
+                <i class="fas fa-phone-alt mr-2"></i> Call Now
+            </a>
+            <a href="#contact" class="bg-purple-800 hover:bg-purple-900 text-white px-8 py-3 rounded-lg text-lg font-semibold transition inline-block">
+                <i class="fas fa-envelope mr-2"></i> Email Us
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">UI</span>
+                        </div>
+                        <span class="text-xl font-bold">UISEL</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Universal Institute of Skills & Entrepreneurship Ltd. (UISEL) - Connecting Bangladeshi talent with global opportunities.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Our Services</a></li>
+                        <li><a href="#training" class="text-gray-400 hover:text-white transition">Training Programs</a></li>
+                        <li><a href="#global" class="text-gray-400 hover:text-white transition">Global Reach</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Training Areas</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Marine & Shipbuilding</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Construction & Civil Works</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Industrial & Technical</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Hospitality</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Healthcare & Caregiving</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>123 Skill Street, Training District, Dhaka, Bangladesh</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-3"></i>
+                            <span>+880 1711 752198</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3"></i>
+                            <span>info@uisel.edu.bd</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">
+                    &copy; 2023 Universal Institute of Skills & Entrepreneurship Ltd. (UISEL). All rights reserved.
+                </p>
+$0
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality would go here
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // You could add more interactive elements here
+        });
+    </script>
+</body>
+</html>

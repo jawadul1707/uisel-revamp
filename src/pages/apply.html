@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Now | UISEL - Universal Institute of Skills & Entrepreneurship Ltd.</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: '#18196b',
+                            'purple-600': '#18196b',
+                            'purple-700': '#14155a',
+                            'purple-800': '#101146',
+                            'purple-100': '#e3e4f7',
+                            'purple-200': '#c7c9ee',
+                            'purple-300': '#abadd6',
+                            'purple-50': '#f5f6fa',
+                        }
+                    }
+                }
+            }
+        </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        .form-section {
+            display: none;
+        }
+        .active-form {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation (same as index.html) -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-[#03084A] rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-xl">UI</span>
+                </div>
+                <span class="text-xl font-bold text-[#03084A]">UISEL</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-gray-700 hover:text-primary">Home</a>
+                <a href="index.html#about" class="text-gray-700 hover:text-primary">About Us</a>
+                <a href="index.html#services" class="text-gray-700 hover:text-primary">Services</a>
+                <a href="training.html" class="text-gray-700 hover:text-primary">Training Programs</a>
+                <a href="index.html#global" class="text-gray-700 hover:text-primary">Global Reach</a>
+                <a href="index.html#contact" class="text-gray-700 hover:text-primary">Contact</a>
+                <a href="apply.html" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">Apply Now</a>
+            </div>
+            <button class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="py-16">
+        <script>
+        // Show the selected form and hide the cards
+        function showForm(type) {
+            document.getElementById('selection-cards').style.display = 'none';
+            document.getElementById('back-button').classList.add('active-form');
+            if (type === 'employee') {
+                document.getElementById('employee-form').classList.add('active-form');
+                document.getElementById('employer-form').classList.remove('active-form');
+            } else if (type === 'employer') {
+                document.getElementById('employer-form').classList.add('active-form');
+                document.getElementById('employee-form').classList.remove('active-form');
+            }
+        }
+
+        // Show the cards and hide the forms
+        function showCards() {
+            document.getElementById('selection-cards').style.display = 'grid';
+            document.getElementById('employee-form').classList.remove('active-form');
+            document.getElementById('employer-form').classList.remove('active-form');
+            document.getElementById('back-button').classList.remove('active-form');
+        }
+        </script>
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h1 class="text-3xl md:text-4xl font-bold text-[#03084A] mb-4">Join UISEL</h1>
+<p class="text-xl text-gray-600 max-w-3xl mx-auto">Select your application type to begin your journey with us</p>
+                <div class="w-20 h-1 bg-purple-600 mx-auto mt-4"></div>
+            </div>
+
+            <!-- Cards Section -->
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto" id="selection-cards">
+                <!-- Employee Card -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 transition duration-300 cursor-pointer" onclick="showForm('employee')">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center">
+                        <i class="fas fa-user-graduate text-[#03084A] text-6xl"></i>
+</div>
+                    <div class="p-8 text-center">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">As an Employee</h2>
+                        <p class="text-gray-600">Apply for our training programs and start your international career journey</p>
+                    </div>
+                </div>
+
+                <!-- Employer Card -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 transition duration-300 cursor-pointer" onclick="showForm('employer')">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center">
+                        <i class="fas fa-briefcase text-[#03084A] text-6xl"></i>
+</div>
+                    <div class="p-8 text-center">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">As an Employer</h2>
+                        <p class="text-gray-600">Partner with us to find skilled professionals for your organization</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Employee Form -->
+            <div id="employee-form" class="form-section max-w-3xl mx-auto mt-12">
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h2 class="text-2xl font-bold text-purple-800 mb-6">Employee Application Form</h2>
+                    <form>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="emp-name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                                <input type="text" id="emp-name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            </div>
+                            <div>
+                                <label for="emp-email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                <input type="email" id="emp-email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            </div>
+                            <div>
+                                <label for="emp-phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                                <input type="tel" id="emp-phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            </div>
+                            <div>
+                                <label for="emp-dob" class="block text-gray-700 font-medium mb-2">Date of Birth</label>
+                                <input type="date" id="emp-dob" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            </div>
+                            <div>
+                                <label for="emp-education" class="block text-gray-700 font-medium mb-2">Education Level</label>
+                                <select id="emp-education" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                    <option value="">Select Education</option>
+                                    <option value="SSC">SSC/Equivalent</option>
+                                    <option value="HSC">HSC/Equivalent</option>
+                                    <option value="Diploma">Diploma</option>
+                                    <option value="Bachelor">Bachelor</option>
+                                    <option value="Master">Master</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="emp-experience" class="block text-gray-700 font-medium mb-2">Work Experience</label>
+                                <select id="emp-experience" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                    <option value="">Select Experience</option>
+                                    <option value="none">No Experience</option>
+                                    <option value="1-3">1-3 Years</option>
+                                    <option value="3-5">3-5 Years</option>
+                                    <option value="5+">5+ Years</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <label for="emp-program" class="block text-gray-700 font-medium mb-2">Program of Interest</label>
+                            <select id="emp-program" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                <option value="">Select Program</option>
+                                <option value="marine">Marine & Shipbuilding</option>
+                                <option value="construction">Construction & Civil Works</option>
+                                <option value="industrial">Industrial & Technical</option>
+                                <option value="hospitality">Hospitality</option>
+                                <option value="healthcare">Healthcare & Caregiving</option>
+                            </select>
+                        </div>
+                        <div class="mt-6">
+                            <label for="emp-message" class="block text-gray-700 font-medium mb-2">Additional Information</label>
+                            <textarea id="emp-message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+                        </div>
+                        <div class="mt-8">
+                            <button type="submit" class="w-full bg-[#03084A] hover:bg-[#020639] text-white font-bold py-3 px-4 rounded-lg transition">
+Submit Application
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Employer Form -->
+            <div id="employer-form" class="form-section max-w-3xl mx-auto mt-12">
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                <h2 class="text-2xl font-bold text-[#03084A] mb-6">Employer Partnership Form</h2>
+<form>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="comp-name" class="block text-gray-700 font-medium mb-2">Company Name</label>
+                                <input type="text" id="comp-name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="comp-country" class="block text-gray-700 font-medium mb-2">Country</label>
+                                <input type="text" id="comp-country" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="comp-contact" class="block text-gray-700 font-medium mb-2">Contact Person</label>
+                                <input type="text" id="comp-contact" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="comp-email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                <input type="email" id="comp-email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="comp-phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                                <input type="tel" id="comp-phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="comp-industry" class="block text-gray-700 font-medium mb-2">Industry</label>
+                                <select id="comp-industry" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <option value="">Select Industry</option>
+                                    <option value="construction">Construction</option>
+                                    <option value="manufacturing">Manufacturing</option>
+                                    <option value="healthcare">Healthcare</option>
+                                    <option value="hospitality">Hospitality</option>
+                                    <option value="shipping">Shipping/Marine</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <label for="comp-needs" class="block text-gray-700 font-medium mb-2">Workforce Needs</label>
+                            <select id="comp-needs" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="">Select Workforce Needs</option>
+                                <option value="skilled">Skilled Workers</option>
+                                <option value="semi-skilled">Semi-Skilled Workers</option>
+                                <option value="technical">Technical Professionals</option>
+                                <option value="caregivers">Caregivers</option>
+                                <option value="hospitality">Hospitality Staff</option>
+                            </select>
+                        </div>
+                        <div class="mt-6">
+                            <label for="comp-message" class="block text-gray-700 font-medium mb-2">Additional Information</label>
+                            <textarea id="comp-message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        <div class="mt-8">
+                                <button type="submit" class="w-full bg-[#03084A] hover:bg-[#020639] text-white font-bold py-3 px-4 rounded-lg transition">
+Submit Partnership Request
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Back Button -->
+            <div id="back-button" class="form-section text-center mt-8">
+                <button onclick="showCards()" class="text-purple-600 hover:text-purple-800 font-medium flex items-center justify-center mx-auto">
+                    <i class="fas fa-arrow-left mr-2"></i> Back to Selection
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                <div class="w-10 h-10 bg-[#03084A] rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-xl">UI</span>
+                </div>
+<span class="text-xl font-bold">UISEL</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Universal Institute of Skills & Entrepreneurship Ltd. (UISEL) - Connecting Bangladeshi talent with global opportunities.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-white transition">Our Services</a></li>
+                        <li><a href="index.html#training" class="text-gray-400 hover:text-white transition">Training Programs</a></li>
+                        <li><a href="index.html#global" class="text-gray-400 hover:text-white transition">Global Reach</a></li>
+                        <li><a href="index.html#contact" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Training Areas</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Marine & Shipbuilding</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Construction & Civil Works</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Industrial & Technical</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Hospitality</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Healthcare & Caregiving</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>123 Skill Street, Training District, Dhaka, Bangladesh</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-3"></i>
+                            <span>+880 1711 752198</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3"></i>
