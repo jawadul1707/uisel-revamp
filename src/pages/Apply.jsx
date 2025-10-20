@@ -82,7 +82,7 @@ export default function Apply() {
       EMAILJS_SERVICE_ID,
       EMAILJS_TEMPLATE_ID_EMPLOYER,
       {
-        to_email: 'jawadul.islam1707@gmail.com',
+        to_email: 'info@uisel.com',
         companyName: employerForm.companyName,
         country: employerForm.country,
         contactPerson: employerForm.contactPerson,
