@@ -51,7 +51,7 @@ export default function Apply() {
       EMAILJS_SERVICE_ID,
       EMAILJS_TEMPLATE_ID_EMPLOYEE,
       {
-        to_email: 'info@uisel.com,
+        to_email: 'info@uisel.com',
         fullName: employeeForm.fullName,
         email: employeeForm.email,
         phone: employeeForm.phone,
